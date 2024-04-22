@@ -38,10 +38,9 @@ async function fetchData(urlApi, options){
                 </div>
             </div>       
         `).slice(0,4).join('')}
-     
-        `
-
-    }catch {
-
+        `;
+        content.innerHTML=view
+    }catch (error){
+        console.log(error);
     }
 })();
