@@ -9,12 +9,12 @@ const content = null || document.getElementById('content')
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '9dee01037dmsh09060f7a4c01728p15a293jsn8f00d37be8a1',
-		'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
+		'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com ',
+		'X-RapidAPI-Key': '9dee01037dmsh09060f7a4c01728p15a293jsn8f00d37be8a1'
 	}
 };
 
-async function fetchData(urlApi, options){
+async function fetchData(urlApi){
     const response = await fetch(urlApi, options)
     const data = await response.json()
     return data
@@ -37,7 +37,7 @@ async function fetchData(urlApi, options){
                 </h3>
                 </div>
             </div>       
-        `).slice(0,4).join('')}
+        `).slice(0,50).join('')}
         `;
         content.innerHTML=view
     }catch (error){
