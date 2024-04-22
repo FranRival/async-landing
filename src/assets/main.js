@@ -1,18 +1,20 @@
 //https://rapidapi.com/
 
-const url = 'https://youtube138.p.rapidapi.com/channel/videos/?id=UCq0OueAsdxH6b8nyAspwViw&filter=videos_latest&hl=en&gl=US';
+
+const API = 'https://youtube-v31.p.rapidapi.com/search?channelId=UCq0OueAsdxH6b8nyAspwViw&part=snippet%2Cid&order=date&maxResults=15'
+
+const url = '';
 const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '9dee01037dmsh09060f7a4c01728p15a293jsn8f00d37be8a1',
-		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
+		'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
 	}
 };
 
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
+async function fetchData(urlApi, options){
+    const response = await fetch(urlApi, options)
+    const data = await response.json()
+    return data
 }
+
