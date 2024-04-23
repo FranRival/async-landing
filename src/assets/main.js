@@ -1,4 +1,4 @@
-//https://rapidapi.com/
+//npm i - gh-pages --save-dev
 
 
 const API = 'https://youtube-v31.p.rapidapi.com/search?channelId=UCq0OueAsdxH6b8nyAspwViw&part=snippet%2Cid&order=date&maxResults=15'
